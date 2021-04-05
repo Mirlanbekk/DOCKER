@@ -2,7 +2,7 @@ cidr_block_vpc    = "10.0.0.0/16"
 instance_tenancy  = "default"
 key_name          = "my_macbook_key"
 ssh_key_path      = "~/.ssh/id_rsa.pub"
-region            = "us-east-2"
+region            = "us-east-1"
 cidr_block_subnet = "10.0.1.0/24" 
 
 map_public_ip_on_launch = true 
