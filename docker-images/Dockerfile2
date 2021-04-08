@@ -1,0 +1,5 @@
+FROM ubuntu
+RUN apt-get update -y 
+RUN apt-get install python3 -y 
+CMD echo "Hello Docker images cmd"
+ENTRYPOINT [ "/bin/echo", "Hello Docker images entrypoint"]

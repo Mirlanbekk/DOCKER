@@ -1,0 +1,9 @@
+FROM centos
+ENV HTML beginner-html-site-styled
+LABEL description="This is simple website docker image"
+RUN yum -y install httpd unzip
+ADD  https://github.com/mdn/$HTML/archive/refs/heads/gh-pages.zip /var/www/html/code.zip
+WORKDIR /var/www/html
+RUN  unzip code.zip && mv $HTML-gh-pages/* .
+CMD apachectl -DFOREGROUND
+

@@ -1,6 +1,5 @@
-FROM ubuntu
-RUN apt-get update
-RUN apt-get install nginx -y
-COPY index.html /var/www/html/
-EXPOSE 80
-CMD ["nginx","-g","daemon off;"]
+FROM centos
+# ENV var1 1234
+RUN yum -y install httpd
+COPY html-code /var/www/html
+CMD apachectl -DFOREGROUND
